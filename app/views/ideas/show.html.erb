@@ -1,0 +1,29 @@
+<p>
+  <strong>Title:</strong>
+  <%= @idea.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @idea.description %>
+</p>
+<%= link_to 'Edit', edit_idea_path(@idea) %> |
+<%= link_to 'Back', ideas_path %>
+<br>
+<br>
+
+<% if @idea.idea_likes.where(user: current_user).exists? %>
+<% else %>
+  <%= link_to 'Like', idea_likes_path(@idea), method: :post %>
+<% end %>
+
+<% if @idea.idea_likes.where(user: current_user).none? %>
+<% else %>
+  <%= link_to 'Unlike', idea_likes_path(@idea), method: :delete %>
+<% end %>
+<%= @idea.idea_likes.count %>
+<br>
+<br>
+
+<%= render template: "comments/index" %>
+<%= render template: "comments/new" %>

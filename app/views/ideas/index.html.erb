@@ -3,6 +3,7 @@
 <table class="table table-striped">
   <thead>
   <tr>
+    <th>Likes</th>
     <th>Title</th>
     <th>Description</th>
     <th colspan="3"></th>
@@ -12,6 +13,7 @@
   <tbody>
   <% @ideas.each do |idea| %>
     <tr>
+      <td><%= idea.idea_likes.count %></td>
       <td><%= idea.title %></td>
       <td><%= idea.description %></td>
       <td><%= link_to 'Show', idea %></td>

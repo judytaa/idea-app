@@ -33265,3 +33265,60 @@ Processing by IdeasController#index as HTML
 Completed 200 OK in 37ms (Views: 32.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-04-19 17:59:43 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/judyta/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+Processing by IdeasController#index as HTML
+Completed 401 Unauthorized in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-04-19 17:59:43 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering /Users/judyta/.rvm/gems/ruby-2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /Users/judyta/.rvm/gems/ruby-2.5.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered /Users/judyta/.rvm/gems/ruby-2.5.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 320ms (Views: 279.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-04-19 17:59:50 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PKeUfD56BHT/rVHb8suCfOC52UOX/zgj0HLfgEYnWfVs85DBVY+UD2beBxps0T5C4ecPhlcM6UjCm+JiRhAPA==", "user"=>{"email"=>"j@j.pl", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "j@j.pl"], ["LIMIT", 1]]
+  ↳ /Users/judyta/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 169ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 17:59:51 +0200
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/judyta/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:13
+  Rendered ideas/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 18:00:25 +0200
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/judyta/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:13
+  Rendered ideas/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-19 18:00:30 +0200
+Processing by IdeasController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/judyta/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.0.rc2/lib/active_record/log_subscriber.rb:98
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  ↳ app/views/ideas/index.html.erb:13
+  Rendered ideas/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 39ms (Views: 33.4ms | ActiveRecord: 0.5ms)
+
+
